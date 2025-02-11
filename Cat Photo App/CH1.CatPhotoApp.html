@@ -1,0 +1,66 @@
+<!DOCTYPE html>                         <!--Dichiarazione del tipo di file-->
+
+<html lang="en">                        <!--Specifico la lingua della pagina web-->
+  <head>                                <!--Head è l'intestazione, ciò che è contenuto nel tab e nell'url-->
+    <meta charset="utf-8">              <!--altro attributo di head poco chiaro-->
+    <title>CatPhotoApp</title>          <!--titolo vero e proprio della pagina nell'url-->
+  </head>
+  <body>                                <!--il body è il corpo della pagina, tutto ciò che è visualizzato nella pagina-->
+    <main>
+      <h1>CatPhotoApp</h1>              <!--nel body l'ordine di importanza (e dimensione txt) è dato da h1 fino a h6 decrescendo-->
+      <section>
+        <h2>Cat Photos</h2>             <!--quindi se h1 è il titolone, h2 sarà il titolo del paragrafo ecc-->
+        <!-- TODO: Add link to cat photos -->
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+      </section>                        <!--qui ho creato un paragrafo <p> aperto e chiuso nel body, e un anchor (link) <a> cioè un hyperlink nel testo con href come attributo link vero
+                                        alt sarebbe il testo alternativo per i non vedenti (accessibilità)-->
+      <section>                         <!--con section distinguo le sezioni della pagina, infatti uso un altro h2 dopo averlo gia aperto e chiuso-->
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>                            <!--UL è una lista non numerata (unordered list). ogni elemento va specificato con il suo <li>-->
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>                        <!--inserisco un'immagine con img, attributo src per il link vero-->
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  <!--e con figcaption metto appunto un caption sotto l'immagine (em sarebbe corsivo)-->
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>                            <!--OL è una ordered list come prima-->
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  <!--strong è il grassetto-->
+        </figure>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo"> <!--con form raccolgo info e le mando ad un altro indirizzo che le raccoglie-->
+          <fieldset>                                                 <!--fieldset è un quadrato con la domanda e le sue risposte multiple-->
+            <legend>Is your cat an indoor or outdoor cat?</legend>    <!--legend è la legenda della domanda, e sotto ho le varie ripsoste, tutte con i loro attributi-->
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label> <!--input per un interazione utente, type per cosa deve comparire (radio è un bottone tondo, checkbox un quadrato da flaggare)-->
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>      <!--name e value servono per catalogare il dato in archivio, servono entrambi a coppia-->
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required> <!--questo input è una barra di testo, placeholder è l'indicazione per cosa scrivere nel box che scompare cliccato sopra-->
+          <button type="submit">Submit</button> <!--e andche questo è il bottone di submit-->
+        </form>
+      </section>
+    </main>
+    <footer> <!--footer è la terza sezione oltre head e body, con le chiusure di pagina, ci metto un link-->
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
+</html>
