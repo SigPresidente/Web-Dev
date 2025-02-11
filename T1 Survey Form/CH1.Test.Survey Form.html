@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gym Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Gym Survey for Members</h1>
+    <p id="description">Please answer the following questions so we can improve our service to you</p>
+    <form id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label">Enter your name: <input id="name" type="text" required placeholder="Your name" /></label>
+        <label for="email" id="email-label">Enter your email address: <input id="email" type="email" required placeholder="Your email address" /></label>
+        <label for="number" id="number-label" >Enter your age: <input id="number" type="number" min="18" max="125" placeholder="Your age" /></label>
+      </fieldset>
+      <fieldset>
+        <label for="activity-label">What type of activity do you practice? 
+          <select id="dropdown" name="activity-label">
+            <option value="">select one</option>
+            <option value="1">Bodybuilding</option>
+            <option value="2">Crossfit</option>
+            <option value="3">Funcional Training</option>
+            <option value="4">Cardio</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend> Do you usually train before 17pm?</legend>
+          <label for="time-morning"><input id="time-early" type="radio" class="inline" value="1" name="early" checked />Yes</label>
+          </label>
+          <label for="time-morning"><input id="time-early" type="radio" class="inline" value="2" name="early" />No</label>
+          </label>
+        <legend> Do you usually train after 17pm?</legend>
+          <label for="time-afternoon"><input id="time-afternoon" type="radio" class="inline" value="3" name="late" checked />Yes</label>
+          <label for="time-afternoon"><input id="time-afternoon" type="radio" class="inline" value="4" name="late" />No</label>
+      </fieldset>
+      <fieldset>
+        <legend> Which machines do you usually find taken the most? </legend>
+          <label for="machine"><input id="machine" type="checkbox" value="1" class="inline" /> Chest </label>
+          <label for="machine"><input id="machine" type="checkbox" value="2" class="inline" /> Back </label>
+          <label for="machine"><input id="machine" type="checkbox" value="3" class="inline" /> Shoulders </label>
+          <label for="machine"><input id="machine" type="checkbox" value="4" class="inline" /> Arms </label>
+          <label for="machine"><input id="machine" type="checkbox" value="5" class="inline" /> Legs </label>
+      </fieldset>
+      <fieldset>
+        <label for="comments"> Additional comments:
+          <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Write your comments...">
+          </textarea>
+        </label>
+      </fieldset>
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+  </body>
+</html>
